@@ -11,7 +11,7 @@
     // Middleware
     app.use(cors());
     app.use(bodyParser.json());
-
+ 
     // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ajithnarayan004:ajith@cluster0.ceklz.mongodb.net/blogpost?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
@@ -91,6 +91,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ajithnarayan004:ajith
     });
 
     // Start the server
-    const PORT = process.env.PORT || 8747; // For local dev only, Vercel assigns a port automatically
+    const PORT = process.env.PORT ; // For local dev only, Vercel assigns a port automatically
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     
